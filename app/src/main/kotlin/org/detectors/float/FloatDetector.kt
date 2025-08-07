@@ -1,4 +1,4 @@
-package org.detectors.Float
+package org.detectors.float
 
 import org.detectors.Detector
 import org.detectors.State

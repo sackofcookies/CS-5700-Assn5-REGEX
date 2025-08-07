@@ -1,17 +1,14 @@
-package org.detectors.Float
+package org.detectors.float
 
 import org.detectors.State
 import org.detectors.DIGITS
 import org.detectors.InvalidState
 
-class DigitsFloatState: State{
-    override val validEnd = false
+class ValidFloatState: State{
+    override val validEnd = true
     override fun consumeLetter(string: String): State {
         if (string in DIGITS){
             return this
-        }
-        else if (string in "."){
-            return PeriodFloatState()
         }
         else {
             return InvalidState()

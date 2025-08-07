@@ -1,6 +1,6 @@
 package org.detectors
 
-import org.detectors.Float.FloatDetector
+import org.detectors.float.FloatDetector
 
 fun main(){
     val string = ".0"
