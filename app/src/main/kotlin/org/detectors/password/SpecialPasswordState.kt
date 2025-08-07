@@ -1,16 +1,17 @@
-package org.detectors.email
+package org.detectors.password
 
 import org.detectors.State
 import org.detectors.InvalidState
+import org.detectors.CAPITALS
 
-class FirstEmailState: State{
+class SpecialPasswordState: State{
     override val validEnd = false
     override fun consumeLetter(string: String): State {
-        if (string in " @"){
-            return InvalidState()
+        if (string in CAPITALS){
+            return ValidPasswordState()
         }
         else {
-            return PreAtEmailState()
+            return this
         }
     }
 }
